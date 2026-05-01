@@ -204,14 +204,3 @@ rag-qa-bot/
 
 After changing chunk settings, re-run `python3 main.py ingest`.
 
----
-
-## Cost Summary
-
-| Component | Cost |
-|---|---|
-| Embedding (Gemini) | $0 — free tier |
-| Generation (Gemini) | $0 — free tier |
-| Vector storage | $0 — local JSON |
-| Compute | $0 — pure stdlib |
-| **Total** | **$0** |
