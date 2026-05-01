@@ -1,0 +1,4 @@
+# NO required dependencies — bot uses only Python stdlib + Gemini REST API.
+#
+# Optional: install only if you need PDF support
+# pdfplumber>=0.11.0

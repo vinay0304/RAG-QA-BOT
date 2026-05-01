@@ -1,0 +1,34 @@
+Introduction to Retrieval-Augmented Generation (RAG)
+
+Retrieval-Augmented Generation (RAG) is an AI framework that enhances the capabilities of large language models (LLMs) by allowing them to retrieve relevant information from a knowledge base before generating a response. Unlike standard LLMs that rely solely on pre-trained knowledge, RAG systems can access up-to-date, domain-specific information dynamically.
+
+How RAG Works
+
+The RAG pipeline consists of two main stages:
+
+1. Indexing Stage
+Documents are collected and split into smaller text chunks. Each chunk is converted into a numerical vector (called an embedding) using an embedding model. These vectors are stored in a vector database, which supports fast similarity search.
+
+2. Query Stage
+When a user asks a question, the question is also converted into an embedding vector. The system then searches the vector database for the most similar document chunks using cosine similarity. The top-K matching chunks are retrieved and passed to an LLM along with the original question to generate a grounded, accurate answer.
+
+Key Benefits of RAG
+
+- Reduces hallucinations by grounding answers in real documents
+- No need to retrain the LLM when knowledge changes — just re-index
+- Answers include citations so users know where information came from
+- Works with any domain: legal, medical, technical, HR, etc.
+
+Vector Embeddings Explained
+
+An embedding is a dense numerical representation of text in a high-dimensional space. Texts with similar meanings are placed closer together in this space. Models like all-MiniLM-L6-v2 from the sentence-transformers library produce 384-dimensional embeddings that capture semantic meaning efficiently. This enables semantic search, which is far more powerful than keyword matching.
+
+ChromaDB as a Vector Store
+
+ChromaDB is an open-source, embedded vector database. It stores document chunks alongside their embeddings and metadata. ChromaDB supports cosine similarity search natively and can persist data to disk, making it ideal for local RAG applications that don't require cloud infrastructure.
+
+Gemini 1.5 Flash — Free LLM Tier
+
+Google's Gemini 1.5 Flash model offers a generous free tier with 1500 requests per day and a 1 million token context window. This makes it an excellent choice for running RAG systems without any cost. The model is accessed via the google-generativeai Python SDK using an API key obtained from Google AI Studio.
+
+This bot uses Gemini 1.5 Flash as the final answer-generation layer after relevant chunks are retrieved.
