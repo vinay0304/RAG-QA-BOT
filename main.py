@@ -9,7 +9,7 @@ Commands:
   python3 main.py query "question"    Single question and exit
   python3 main.py status              Show index stats
 """
-
+ 
 import sys
 
 BANNER = r"""
