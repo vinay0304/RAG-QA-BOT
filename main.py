@@ -15,7 +15,7 @@ import sys
 BANNER = r"""
 ================================================
        RAG Q&A Bot
-       Pure Python + Gemini API (free)
+       Pure Python + Gemini API
 ================================================
 """
 
