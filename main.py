@@ -10,7 +10,7 @@ Commands:
   python3 main.py status              Show index stats
 """
  
-import sys
+import sys 
 
 BANNER = r"""
 ================================================
@@ -20,7 +20,7 @@ BANNER = r"""
 """
 
 
-def show_help():
+def show_help(): 
     print(BANNER)
     print("Usage:")
     print("  python3 main.py ingest             # index docs/ folder")
