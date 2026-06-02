@@ -6,7 +6,7 @@ A Retrieval-Augmented Generation Q&A bot. Drop your documents into `docs/`, ask 
 
 See [SYSTEM_DESIGN.md](SYSTEM_DESIGN.md) for architecture details.
 
----
+--- 
 
 ## How It Works (TL;DR)
 
